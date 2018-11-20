@@ -12,7 +12,10 @@ const Noticia = (props) => {
                 <span className = "card-title">{source.name}</span>
             </div>
         :
-            ''; //haciendo un ternario para verificar si la noticia tiene imagen o no
+            <div className = "card-image">
+                <img src='https://raw.githubusercontent.com/marielexoteria/AppNoticias/master/src/img/fallback_no_image.png' alt={title} />
+                <span className = "card-title">{source.name}</span>
+            </div>  //haciendo un ternario para verificar si la noticia tiene imagen o no; en caso de no tenerla, se desplegará una imagen de fallback
 
         
     return (
